@@ -2,12 +2,12 @@ import axios from "axios";
 
 const url = 'http://127.0.0.1:8000/'
 
-const alumnosApi = axios.create({
-    baseURL: `${url}/api/v1/alumnos`,
+const userApi = axios.create({
+    baseURL: `${url}/api/v1/user`,
 });
 
-export const getAlumnos = () => alumnosApi.get("/");
-export const getAlumnoById = (id) => alumnosApi.get(`/${id}/`);
-export const createAlumno = (alumno) => alumnosApi.post("/", alumno);
-export const updateAlumno = (id, alumno) => alumnosApi.put(`/${id}/`, alumno);
-export const deleteAlumno = (id) => alumnosApi.delete(`/${id}`);
+export const getUsers = () => userApi.get("/");
+export const getuserById = (id) => userApi.get(`/${id}/`);
+export const createuser = (user) => userApi.post("/", user);
+export const updateuser = (id, user) => userApi.put(`/${id}/`, user);
+export const deleteuser = (id) => userApi.delete(`/${id}`);

@@ -3,6 +3,6 @@ from .models import User
 
 
 class userSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model = User
         fields = "__all__"

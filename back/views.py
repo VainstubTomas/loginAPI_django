@@ -3,13 +3,6 @@ from rest_framework import viewsets, generics
 from .serializer import userSerializer
 from .models import User
 
-# Create your views here.
-
-# class userViewSet(viewsets.ModelViewSet):
-#     queryset = User.objects.all()
-#     serializer_class = userSerializer
-    # previamente creado dentro de serializers e importado arriba
-
 """Ambas views generadas abajo realizan los metodos cruds para trabajar apropiadamente
 con los datos, solo hay que pasarle algunos parametros aclarados en las lineas internas"""
 

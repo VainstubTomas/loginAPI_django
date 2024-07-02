@@ -7,6 +7,7 @@ class User(models.Model):
     lastname = models.CharField(max_length=100, default="")
     dni = models.CharField(max_length=8, default="")
     password = models.CharField(max_length=100, default="")
+    localidad = models.CharField(max_length=100, default="")
 
     def __str__(self):
         return self.name

@@ -7,3 +7,6 @@ class User(models.Model):
     lastname = models.TextField(max_length=100, default="")
     dni = models.CharField(max_length=8, default="")
     password = models.TextField(max_length=100, default="")
+
+    def __str__(self):
+        return self.User

@@ -4,10 +4,8 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from back import views
 
-router = DefaultRouter()
-router.register(r"users", views.userViewSet)
-
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", include(router.urls)),
+    path('admin/', admin.site.urls),
+    path('', include('back.urls', namespace='back')),
+    path('api/', include('back.urls', namespace='back_api')),
 ]

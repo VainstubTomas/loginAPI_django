@@ -21,7 +21,9 @@ class userList(generics.ListCreateAPIView):
 """ListCreateAPIView -> Used for read-write endpoints to represent a collection of model instances.
 Provides get and post method handlers"""
 
-class userRetrieve(generics.RetrieveDestroyAPIView):       
+class userDetail(generics.RetrieveDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = userSerializer    
     pass  
 
 """RetrieveDestroyAPIView -> Used for read or delete endpoints to represent a single model instance.

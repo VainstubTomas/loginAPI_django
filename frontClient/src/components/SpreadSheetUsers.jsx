@@ -10,7 +10,7 @@ export default function SpreadSheetUsers() {
     const navigate = useNavigate();
 
     const touch = () => {
-        navigate('')
+        navigate('create/')
     }
 
     const [user, setUser] = useState();

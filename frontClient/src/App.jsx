@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SpreadSheetUsers from './SpreadSheetUsers';
+import SpreadSheetUsers from './components/SpreadSheetUsers';
 
 export default function App() {
     return (

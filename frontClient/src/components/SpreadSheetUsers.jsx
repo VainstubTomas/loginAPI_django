@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { Typography } from "@mui/material";
 import Button from '@mui/material/Button';
-import useNavigate from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 import "./SpreadSheetUsers.css"
 
 export default function SpreadSheetUsers() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const touch = () => {
         navigate('')

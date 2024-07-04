@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 import './CreateUser.css'
 
+
     const FormComponent = () => {
+
+      const navigate = useNavigate()
+
         const [formData, setFormData] = useState({
           name: '',
           lastname: '',
@@ -23,7 +29,7 @@ import './CreateUser.css'
       
         const handleSubmit = async (e) => {
           e.preventDefault();
-          const url = 'http://127.0.0.1:8000/api';
+          const url = 'http://127.0.0.1:8000/api/';
       
           try {
             const response = await axios.post(url, formData, {
@@ -32,6 +38,7 @@ import './CreateUser.css'
             }});
             setResponseMessage('Datos enviados exitosamente');
             console.log('Respuesta:', response.data);
+            navigate('/');
           } catch (error) {
             setResponseMessage('Error al enviar los datos');
             console.error('Error:', error);
@@ -40,6 +47,7 @@ import './CreateUser.css'
 
     return(
         <div>
+
         <form onSubmit={handleSubmit}>
           <div>
             <label>name:</label>
